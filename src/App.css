@@ -20,3 +20,36 @@
     border: 1px solid black;
 }
 
+
+.detail-view{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.child h5{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.child{
+    width: 15%;
+    margin: 1px;
+}
+
+.child button{
+    width: 30%;
+    padding: 1px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.bg-1{
+    background: green;
+}
+.bg-2{
+    background: red;
+}
+.bg-3{
+    background: blue;
+}

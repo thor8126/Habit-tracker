@@ -12,12 +12,28 @@ function App() {
     {
       id: 1,
       name: "Reading",
-      count: 0,
+      count: {
+        Monday:true,
+        Tuesday:false,
+        Wednesday:false,
+        Thursday:false,
+        Friday:false,
+        Saturday:false,
+        Sunday:false,
+      }
     },
     {
       id: 2,
       name: "Running",
-      count: 0,
+      count: {
+        Monday:true,
+        Tuesday:false,
+        Wednesday:false,
+        Thursday:false,
+        Friday:false,
+        Saturday:false,
+        Sunday:true,
+      }
     }
   ];
 
@@ -27,6 +43,10 @@ function App() {
 
   const addHabit = (habit) => {
     setHabits([...habits, habit]);
+  };
+
+  const deleteHabit = (id) => {
+    setHabits(habits.filter((habit) => habit.id !== id));
   };
 
   const toggle = () => {
@@ -41,6 +61,7 @@ function App() {
         toggle={toggle}
         addHabit={addHabit} 
         habits={habits}
+        deleteHabit={deleteHabit}
       />
     </>
   )

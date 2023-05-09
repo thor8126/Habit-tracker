@@ -8,7 +8,15 @@ function AddForm(props) {
 
   const [formData, setFormData] = useState({
     name: "",
-    count: 0,
+    count: {
+      Monday: false,
+      Tuesday: false,
+      Wednesday: false,
+      Thursday: false,
+      Friday: false,
+      Saturday: false,
+      Sunday: false,
+    }
   });
 
   const toggleForm = () => {
