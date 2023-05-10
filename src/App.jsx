@@ -10,29 +10,29 @@ function App() {
 
   const Habits = [
     {
-      id: 1,
-      name: "Reading",
+      id: 0,
+      name: "Code Everyday before 12am",
       count: {
         Monday:true,
-        Tuesday:false,
+        Tuesday:true,
         Wednesday:false,
-        Thursday:false,
-        Friday:false,
-        Saturday:false,
-        Sunday:false,
+        Thursday:null,
+        Friday:null,
+        Saturday:null,
+        Sunday:null,
       }
     },
     {
-      id: 2,
-      name: "Running",
+      id: 1,
+      name: "Exercise Everyday",
       count: {
         Monday:true,
-        Tuesday:false,
-        Wednesday:false,
-        Thursday:false,
-        Friday:false,
-        Saturday:false,
-        Sunday:true,
+        Tuesday:null,
+        Wednesday:null,
+        Thursday:null,
+        Friday:null,
+        Saturday:null,
+        Sunday:null,
       }
     }
   ];
@@ -53,6 +53,31 @@ function App() {
       toggleForm(!form);
   }
 
+
+  const toggleDayFunc = (habitId, day) => {
+    setHabits((prevState) => {
+      return prevState.map((habit) => {
+        if (habit.id === habitId) {
+          habit.count[day] = true;
+        }
+        return habit;
+      });
+    });
+  };
+
+  const toggleDayFunc2 = (habitId, day) => {
+    setHabits((prevState) => {
+      return prevState.map((habit) => {
+        if (habit.id === habitId) {
+          habit.count[day] = false;
+        }
+        return habit;
+      });
+    });
+  };
+  
+
+
   return (
     <>
       <Header/>
@@ -62,6 +87,8 @@ function App() {
         addHabit={addHabit} 
         habits={habits}
         deleteHabit={deleteHabit}
+        toggleDayFunc={toggleDayFunc}
+        toggleDayFunc2={toggleDayFunc2}
       />
     </>
   )

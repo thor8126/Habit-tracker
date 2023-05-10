@@ -7,13 +7,14 @@
     width: 100vw;
     height: 100vw;
     background: rgba(0, 0, 0, .5);
+    z-index: 99;
 }
 
 .add-form{
     position: absolute;
     top: 10%;
     left: 40%;
-    z-index: 2;
+    z-index: 999;
     width: fit-content;
     padding: 1rem;
     background: #fff;
@@ -22,6 +23,7 @@
 
 
 .detail-view{
+    margin-top: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,14 +44,4 @@
     padding: 1px;
     border-radius: 5px;
     margin: 5px;
-}
-
-.bg-1{
-    background: green;
-}
-.bg-2{
-    background: red;
-}
-.bg-3{
-    background: blue;
 }

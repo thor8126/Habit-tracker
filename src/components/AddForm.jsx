@@ -9,13 +9,13 @@ function AddForm(props) {
   const [formData, setFormData] = useState({
     name: "",
     count: {
-      Monday: false,
-      Tuesday: false,
-      Wednesday: false,
-      Thursday: false,
-      Friday: false,
-      Saturday: false,
-      Sunday: false,
+      Monday: null,
+      Tuesday: null,
+      Wednesday: null,
+      Thursday: null,
+      Friday: null,
+      Saturday: null,
+      Sunday: null,
     }
   });
 

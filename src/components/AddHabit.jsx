@@ -10,8 +10,9 @@ function AddHabit(props) {
   return (
     <>
         <Container className='mt-4 d-flex align-items-center justify-content-end'>
-                <button onClick={toggleForm} className="btn btn-primary">Add Habit</button>
+                <button onClick={toggleForm} className="btn btn-primary p-3">Add Habit</button>
         </Container>
+        <br />
     </>
   )
 }
